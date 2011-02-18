@@ -1,0 +1,9 @@
+Intro
+
+adminsitrator is an automatization to create an admin dashboard panel with authorization
+
+Usage
+
+ rails new app ...
+ gem install administrator
+ rails g admin
