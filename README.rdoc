@@ -1,9 +1,10 @@
-Intro
+= Administrator
 
-adminsitrator is an automatization to create an admin dashboard panel with authorization
+This is a plugin based on padrino framework.
+Adminsitrator is an automatization to create an admin dashboard panel with authorization
 
-Usage
+== Usage
 
- rails new app ...
- gem install administrator
- rails g admin
+  rails new app ...
+  gem install administrator
+  rails g admin

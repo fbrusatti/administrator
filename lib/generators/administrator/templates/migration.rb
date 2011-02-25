@@ -1,6 +1,9 @@
 class CreateAccountsTable < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
+      t.string 'email'
+      t.string 'password_hash'
+      t.string 'password_salt'
 
       t.timestamps
     end
@@ -10,4 +13,5 @@ class CreateAccountsTable < ActiveRecord::Migration
     drop_table :users
   end
 end
+
 
