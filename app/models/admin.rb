@@ -1,4 +1,4 @@
-class Administrator < ActiveRecord::Base
+class Admin < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation
   
   attr_accessor :password

@@ -1,6 +1,6 @@
 class CreateAdministratorsTable < ActiveRecord::Migration
   def self.up
-    create_table :administrators do |t|
+    create_table :admins do |t|
       t.string 'email'
       t.string 'password_hash'
       t.string 'password_salt'
@@ -10,7 +10,7 @@ class CreateAdministratorsTable < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :administrators
+    drop_table :admins
   end
 end
 
