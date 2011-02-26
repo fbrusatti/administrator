@@ -19,6 +19,6 @@ class AdministratorGenerator < Rails::Generators::Base
   end
 
   def create_migration_file
-    migration_template 'migration.rb', 'db/migrate/create_administration_tables.rb'
+    migration_template 'migration.rb', 'db/migrate/create_administrators_table.rb'
   end
 end
