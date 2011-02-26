@@ -1,4 +1,4 @@
-class CreateAccountsTable < ActiveRecord::Migration
+class CreateAdministratorsTable < ActiveRecord::Migration
   def self.up
     create_table :administrators do |t|
       t.string 'email'

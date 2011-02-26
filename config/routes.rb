@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 #  get "sign_up" => "users#new", :as => "sign_up"
 #  root :to => "users#new"
 
+  get "admin" => "administrator/sessions#new", :as => "admin"
+
   namespace :administrator do 
     resources :administrators
     resources :sessions
