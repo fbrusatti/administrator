@@ -1,4 +1,7 @@
-class Administrator::AdministratorController < ApplicationController  
+class Administrator::Admin < ApplicationController  
+
+  layout 'administrator/admin'
+
   def new  
     @admin = Administrator.new  
   end  

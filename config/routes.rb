@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "admin" => "administrator/sessions#new", :as => "admin"
 
   namespace :administrator do 
-    resources :administrators
+    resources :admin
     resources :sessions
   end
 end
