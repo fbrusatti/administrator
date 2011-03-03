@@ -3,6 +3,8 @@
   %head
     %title= content_for?(:title) ? yield(:title) : "Untitled"
 
+    = stylesheet_link_tag 'administrator.css'
+
     / *************************************************************************
     / BluePrint CSS Framework 
     / ************************************************************************* 
@@ -18,9 +20,11 @@
 
 
     %header
-      - logo = image_tag("logo.png", :alt => "Sample App", :class => "round")
-      = link_to logo, administrator_adminstrators_path
-
+      .container
+        .column.span-20.prepend-8
+          - logo = image_tag("logo.png", :alt => "Sample App", :class => "round")
+          = link_to logo, administrator_adminstrators_path
+        .clear
 
     %section.round
       = yield
@@ -28,5 +32,5 @@
 
     %footer
       %hr
-      Footer
-
+      .gray.rigth-align
+        Create by ...
