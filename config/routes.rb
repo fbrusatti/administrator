@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "sign_up" => "administrator/admins#new", :as => "sign_up"
 
   namespace :administrator do 
-    resources :adminstrators
+    resources :admins
     resources :sessions
   end
 end
