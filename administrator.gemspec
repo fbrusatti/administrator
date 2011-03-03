@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "administrator"
 
   s.add_dependency 'haml'
+  s.add_dependency 'bcrypt-ruby'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

@@ -6,9 +6,9 @@ class Administrator::AdminsController < ApplicationController
   end  
     
   def create  
-    @admin = Admin.new(params[:administrator])  
+    @admin = Admin.new(params[:admin])
     if @admin.save  
-      redirect_to root_url, :notice => "Signed up!"  
+      redirect_to admin_url, :notice => "Signed up!!!"  
     else  
       render "new"  
     end  
