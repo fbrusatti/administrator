@@ -6,8 +6,8 @@
   .clear
 
   .column.span-20.prepend-8
-    = form_for @admin do |f|
-      = f.error_messages
+    = form_for @admin, :url => new_administrator_admin_path() do |f|
+      =# f.error_messages
 
       .column.span-2
         = f.label :email

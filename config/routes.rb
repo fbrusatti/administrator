@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   namespace :administrator do 
     resources :admins
-    resources :sessions
+#    resources :sessions
   end
 end
 
