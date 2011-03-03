@@ -1,13 +1,12 @@
-class Administrator::AdministratorsController < ApplicationController  
-
+class Administrator::AdminsController < ApplicationController
   layout 'administrator/admin'
 
   def new  
-    @admin = Administrator.new  
+    @admin = Admin.new  
   end  
     
   def create  
-    @admin = Administrator.new(params[:administrator])  
+    @admin = Admin.new(params[:administrator])  
     if @admin.save  
       redirect_to root_url, :notice => "Signed up!"  
     else  

@@ -1,5 +1,4 @@
-class Administrator::SessionsController < ApplicationController  
-
+class Administrator::SessionsController < ApplicationController
   layout 'administrator/admin'
 
   def new
