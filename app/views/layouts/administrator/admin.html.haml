@@ -21,10 +21,19 @@
 
     %header
       .container
-        .column.span-20.prepend-10
+        .column.prepend-10
           - logo = image_tag("logo.png", :alt => "Sample App", :class => "round")
           = link_to logo, administrator_admins_path()
         .clear
+
+      %div{:id => 'user_nav'}
+        - if current_user
+          Logged in as
+          =# link_to current_user.email, edit_user_registration_url
+          =# link_to "Sign out", destroy_user_session_path
+        - else
+          ="#{link_to "Sign up", new_user_registration_path} or #{link_to "sign in", new_user_session_path}"
+
 
     %section.round
       = yield

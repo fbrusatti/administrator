@@ -1,11 +1,11 @@
-Rails.application.routes.draw do
+Administrator::Engine.routes.draw do
+  #  get 'admin'         => 'administrator/admin#index',       :as => 'admin'
+  root :to => 'administrator/admin#index'
 
-#  get "log_out" => "sessions#destroy", :as => "log_out"
-#  root :to => "users#new"
+  get "admin_signup"  => "administrator/admins#new",        :as => "sign_up"
+  get "admin_login"   => "administrator/sessions#new",      :as => "log_in"
+  get "admin_logout"  => "administrator/sessions#destroy",  :as => "log_out"
 
-  get 'admin' => 'administrator/admin#index', :as => 'admin'
-  get "admin_login" => "administrator/sessions#new", :as => "log_in"
-  get "admin_signup" => "administrator/admins#new", :as => "sign_up"
 
   namespace :administrator do 
     resources :admins

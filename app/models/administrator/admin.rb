@@ -1,6 +1,6 @@
 require 'bcrypt'
 
-class Admin < ActiveRecord::Base
+class Administrator::Admin < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation
   
   attr_accessor :password
@@ -27,3 +27,4 @@ class Admin < ActiveRecord::Base
     end
   end
 end
+
