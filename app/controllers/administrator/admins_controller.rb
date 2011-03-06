@@ -7,6 +7,16 @@ module Administrator
       @admins = Admin.all
     end
 
+    def edit
+      @admin = Admin.find(params[:id])
+    end
+
+    def update
+      @admin = Admin.find(params[:id])
+      @admin.update_attributes(params[:admin])
+    end
+
+
     def new
       @admin = Admin.new  
     end  
