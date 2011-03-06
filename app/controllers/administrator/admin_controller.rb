@@ -1,6 +1,6 @@
-class Administrator::AdminController < ApplicationController
-
-  def index
+module Administrator
+  class AdminController < Administrator::ApplicationController
+    def index
+    end
   end
-
 end

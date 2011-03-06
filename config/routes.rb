@@ -1,15 +1,20 @@
-Administrator::Engine.routes.draw do
-  #  get 'admin'         => 'administrator/admin#index',       :as => 'admin'
-  root :to => 'administrator/admin#index'
+Rails.application.routes.draw do |map|
 
-  get "admin_signup"  => "administrator/admins#new",        :as => "sign_up"
-  get "admin_login"   => "administrator/sessions#new",      :as => "log_in"
-  get "admin_logout"  => "administrator/sessions#destroy",  :as => "log_out"
+  # Prefix route urls with "admin" and route names with "rails_admin_"
+  scope "admin", :module => :administrator, :as => "admin" do
+    root :to => 'admin#index'
 
+    get "admin_signup"  => "admins#new",        :as => "sign_up"
+    get "admin_login"   => "sessions#new",      :as => "log_in"
+    get "admin_logout"  => "sessions#destroy",  :as => "log_out"
 
-  namespace :administrator do 
     resources :admins
     resources :sessions
   end
+
 end
+
+
+#Administrator::Engine.routes.draw do
+#end
 

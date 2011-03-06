@@ -9,6 +9,16 @@ footer {
   bottom: -1px;
 }
 
+#user_nav{
+  float: right;
+  padding-right: 10px;
+}
+
+#user_nav a{
+  text-decoration: none;
+}
+
+
 /***************  Font  *************/
 .gray{color: gray;}
 

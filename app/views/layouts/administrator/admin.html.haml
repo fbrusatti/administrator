@@ -23,16 +23,16 @@
       .container
         .column.prepend-10
           - logo = image_tag("logo.png", :alt => "Sample App", :class => "round")
-          = link_to logo, administrator_admins_path()
-        .clear
-
-      %div{:id => 'user_nav'}
-        - if current_user
-          Logged in as
-          =# link_to current_user.email, edit_user_registration_url
-          =# link_to "Sign out", destroy_user_session_path
-        - else
-          ="#{link_to "Sign up", new_user_registration_path} or #{link_to "sign in", new_user_session_path}"
+          = link_to logo, admin_admins_path()
+  
+        %div{:id => 'user_nav'}
+          - if current_user
+            Logged in as
+            = link_to current_user.email, edit_admin_admin_url(current_user)
+            |
+            = link_to "Sign out", admin_log_out_path
+          - else
+            = link_to "sign in", admin_log_in_path
 
 
     %section.round

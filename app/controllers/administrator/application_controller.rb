@@ -1,10 +1,12 @@
-class ApplicationController < ActionController::Base
-  helper_method :current_user
+module Administrator
+  class ApplicationController < ::ApplicationController
+    helper_method :current_user
 
-private
+    private
 
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+      def current_user
+        @current_user ||= Admin.find(session[:admin_id]) if session[:admin_id]
+      end
   end
 end
 
