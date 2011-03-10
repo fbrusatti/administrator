@@ -1,13 +1,18 @@
 = Administrator
 
-This is a plugin based on padrino framework.
-Adminsitrator is an automatization to create an admin dashboard panel with authorization
+A generator of an initial admin interface to start to work.
+
+After running the generator you will have:
+
+* A new model named Admin whit a default admin record
+* Controllers namespaced to Administrator to manage all features
+* Views generates under Administrator folders and
+* The corresponding layout file
 
 == Usage
 
   # create & configure your application
-  $> rails new app ...
-  ...
+  $> rails new app test_app
   
   # Add gem to Gemfile
   gem 'administrator'
@@ -25,3 +30,10 @@ Adminsitrator is an automatization to create an admin dashboard panel with autho
   http://localhost:3000/admin
    # user: admin@email.com
    # pass: admin
+
+== Options
+
+* skip-migration (defatul: false)
+* create-files (default: true)
+
+== Development
