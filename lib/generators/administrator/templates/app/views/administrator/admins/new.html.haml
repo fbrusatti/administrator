@@ -1,0 +1,41 @@
+.container
+
+  .column.span-20.prepend-8
+    %h1
+      Sign Up
+  .clear
+
+  .column.span-20.prepend-8
+    = form_for @admin, :url => administrator_admins_path() do |f|
+      - if @admin.errors.any?
+        .error_messages
+          %h2
+            Form is invalid
+          %ul
+            - for message in @admin.errors.full_messages
+              %li= message
+
+      .column.span-2
+        = f.label :email
+      .column.span-6.last
+        = f.text_field :email
+      .clear
+
+      .column.span-2
+        = f.label :password
+      .column.span-6
+        = f.password_field :password
+      .clear
+
+      .column.span-2
+        = f.label :password_confirmation
+      .column.span-6
+        = f.password_field :password_confirmation
+      .clear
+
+      .column.span-2
+        &nbsp;
+      .column.span-6
+        = f.submit
+      .clear
+

@@ -1,0 +1,25 @@
+.container
+
+  .column.span-20.prepend-8
+    %h1
+      Log in
+  .clear
+
+  .column.span-20.prepend-8
+    = form_tag admin_sessions_path do
+      .column.span-2
+        = label_tag :email
+      .column.span-6.last
+        = text_field_tag :email, params[:email]
+      .clear
+
+      .column.span-2
+        = label_tag :password
+      .column.span-6
+        = password_field_tag :password
+      .clear
+
+      .column.span-2
+        &nbsp;
+      .column.span-6.prepend-3
+        = submit_tag "Log in"
