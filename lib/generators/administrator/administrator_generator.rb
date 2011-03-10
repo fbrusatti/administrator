@@ -30,7 +30,7 @@ class AdministratorGenerator < Rails::Generators::Base
 
    def create_files
      if options.create_files?
-       puts "Create Files"
+      copy_file "models/admin.rb", "app/models/admin.rb"
      else
        puts "Files will not be created"
       end
