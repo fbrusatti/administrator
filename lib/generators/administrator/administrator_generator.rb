@@ -30,9 +30,24 @@ class AdministratorGenerator < Rails::Generators::Base
 
    def create_files
      if options.create_files?
-      copy_file "models/admin.rb", "app/models/admin.rb"
-     else
-       puts "Files will not be created"
+        # create the model file
+        copy_file "models/admin.rb", "app/models/admin.rb"
+
+        # create controller files
+        copy_file "controllers/administrator/admin_controller.rb", "app/controllers/administrator/admin_controller.rb"
+        copy_file "controllers/administrator/admins_controller.rb", "app/controllers/administrator/admins_controller.rb"
+        copy_file "controllers/administrator/application_controller.rb", "app/controllers/administrator/application_controller.rb"
+        copy_file "controllers/administrator/sessions_controller.rb", "app/controllers/administrator/sessions_controller.rb"
+
+        # create view files
+        %w[index show new edit _form].each do |view|
+          copy_file "views/administrator/admins/#{view}.html.haml", "app/views/administrator/admins/#{view}.html.haml"
+        end
+        copy_file "views/administrator/admin/index.html.haml", "app/views/administrator/admin/index.html.haml"
+        copy_file "views/administrator/sessions/new.html.haml", "app/views/administrator/sessions/new.html.haml"
+
+        # create view files
+        copy_file "views/layouts/administrator/admin.html.haml", "app/views/layouts/administrator/admin.html.haml"
       end
    end
 end
