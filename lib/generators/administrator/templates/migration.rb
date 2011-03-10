@@ -7,6 +7,7 @@ class CreateAdministratorsTable < ActiveRecord::Migration
 
       t.timestamps
     end
+    Administrator::Admin.create(:email => 'admin@email.com', :password => 'admin')
   end
 
   def self.down

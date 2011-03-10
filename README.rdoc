@@ -5,14 +5,23 @@ Adminsitrator is an automatization to create an admin dashboard panel with autho
 
 == Usage
 
-  # create your application
+  # create & configure your application
   $> rails new app ...
+  ...
   
-  # edit Gemfile
+  # Add gem to Gemfile
   gem 'administrator'
 
-  # install the gem
+  # Run bundle to install gem
   $> bundle install
 
   # run the generator
   $> rails g administrator
+
+  # run migrations
+  $> rake db:migrate
+
+  # see the admin interface at 
+  http://localhost:3000/admin
+   # user: admin@email.com
+   # pass: admin
