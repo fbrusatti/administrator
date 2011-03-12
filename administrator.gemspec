@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["fbrusatti@gmail.com"]
   s.homepage    = "http://rubygems.org/gems/administrator"
   s.summary     = %q{Administrator is a generator of a Rails 3 admin interface}
-  s.description = %q{Generate a simple admin dashboard panel with authorization to start to configure}
+  s.description = %q{Generate a simple admin dashboard panel with authorization to start to configure to Rails 3}
 
   s.rubyforge_project = "administrator"
 
